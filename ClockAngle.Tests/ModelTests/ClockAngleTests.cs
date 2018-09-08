@@ -13,6 +13,13 @@ namespace ClockAngle.TestTools
             int minute = 15;
             Assert.AreEqual(0,Clock.FindAngle(hour,minute));
         }
+        [TestMethod]
+        public void FindAngle_ReturnAngleBetweenHands_30()
+        {
+            int hour = 1;
+            int minute = 45;
+            Assert.AreEqual(120,Clock.FindAngle(hour,minute));
+        }
     }
 }
 
