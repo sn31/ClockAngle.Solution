@@ -8,7 +8,8 @@ namespace ClockAngle.Models
         {
             int hourLocation = hour * 5;
             int degreeDiff = Math.Abs(hourLocation-minute)*6;
-            return degreeDiff;
+            int result = (degreeDiff>180) ? (360-degreeDiff) : degreeDiff;
+            return result;
         }
     }
 }
